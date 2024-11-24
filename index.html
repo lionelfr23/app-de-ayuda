@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Distrito de Calapuja - Reportes</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app-container">
+    <h1>Distrito de Calapuja - Reportes</h1>
+
+    <!-- Botones -->
+    <button class="main-button" id="btn-ayuda">Ayuda</button>
+    <button class="main-button" id="btn-reportar">Reporta Aquí</button>
+    <button class="main-button" id="btn-ver-reportes">Ver Reportes</button>
+  </div>
+
+  <!-- Modal de Ayuda -->
+  <div class="modal hidden" id="ayuda-modal">
+    <div class="modal-content ayuda">
+      <p class="alert">🚨</p>
+      <p>Enviado</p>
+      <button id="close-ayuda">Cerrar</button>
+    </div>
+  </div>
+
+  <!-- Modal de Reportar -->
+  <div class="modal hidden" id="report-modal">
+    <div class="modal-content report">
+      <h2>Formulario de Reporte</h2>
+      <form id="report-form">
+        <label for="name">Nombre</label>
+        <input type="text" id="name" required>
+
+        <label for="dni">DNI</label>
+        <input type="text" id="dni" required>
+
+        <label for="address">Dirección del Problema</label>
+        <input type="text" id="address" required>
+
+        <label for="description">Descripción</label>
+        <textarea id="description" rows="4" required></textarea>
+
+        <label for="photo">Foto</label>
+        <input type="file" id="photo" accept="image/*" required>
+
+        <button type="submit">Enviar</button>
+      </form>
+      <button id="close-report-modal">Cerrar</button>
+    </div>
+  </div>
+
+  <!-- Modal de Éxito -->
+  <div class="modal hidden" id="success-modal">
+    <div class="modal-content">
+      <p class="success-message">✔️ Se envió correctamente su reporte</p>
+    </div>
+  </div>
+
+  <!-- Modal de Reportes -->
+  <div class="modal hidden" id="reportes-modal">
+    <div class="modal-content history">
+      <h2>Historial de Reportes</h2>
+      <div id="reportes-list">
+        <!-- Aquí se mostrarán los reportes dinámicamente -->
+      </div>
+      <button id="close-reportes-modal">Cerrar</button>
+    </div>
+  </div>
+
+  <footer>
+    <p>Creado por Lionel Edersson Aragos Illanes</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

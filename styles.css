@@ -1,0 +1,140 @@
+/* General Styles */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to right, #2c3e50, #4ca1af);
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 2em;
+  color: #f1c40f;
+}
+
+footer p {
+  position: absolute;
+  bottom: 10px;
+  font-size: 0.8em;
+  color: #ffffff;
+  text-align: center;
+}
+
+/* Main Container */
+.app-container {
+  text-align: center;
+}
+
+/* Buttons */
+.main-button {
+  display: block;
+  width: 80%;
+  max-width: 300px;
+  margin: 10px auto;
+  padding: 15px;
+  font-size: 1.2em;
+  color: #ffffff;
+  background: #2980b9;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.main-button:hover {
+  background: #3498db;
+}
+
+/* Modal Styles */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0.3s, opacity 0.3s;
+}
+
+.modal-content {
+  background: #ecf0f1;
+  padding: 20px;
+  width: 90%;
+  max-width: 400px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  color: #2c3e50;
+}
+
+.modal.hidden {
+  visibility: hidden;
+  opacity: 0;
+}
+
+/* Specific Modal Styles */
+.modal-content.ayuda p {
+  color: #e74c3c;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.modal-content.report label {
+  margin-top: 10px;
+  font-size: 1em;
+}
+
+.modal-content.history h2 {
+  margin-bottom: 15px;
+  color: #3498db;
+}
+
+#reportes-list p {
+  margin: 5px 0;
+  font-size: 1em;
+}
+
+button {
+  padding: 10px 20px;
+  margin-top: 15px;
+  background: #c0392b;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background: #e74c3c;
+}
+
+.success-message {
+  color: #28a745;
+  font-size: 1.5em;
+  font-weight: bold;
+  animation: fadeIn 0.5s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
